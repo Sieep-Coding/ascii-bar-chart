@@ -6,7 +6,7 @@ export default {
     '/node_modules/(?!chalk)/', // Allow transformation of chalk module
   ],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest", // Only use ts-jest for TypeScript files
+    '^.+\\.ts$': 'ts-jest', // Only use ts-jest for TypeScript files
     "^.+\\.(js|jsx)$": "babel-jest", // Use babel-jest for JS files
   },
   moduleFileExtensions: ["ts", "js", "jsx", "json"],

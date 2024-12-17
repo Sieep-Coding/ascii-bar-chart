@@ -3,7 +3,7 @@ import { renderBarChart } from "./charts/barChart.ts";
 import { Logger } from "./utils/logger.ts";
 import { sampleData } from "./data/sampleData.ts";
 
-const main = () => {
+export const main = () => {
     const logger = new Logger();
     console.log("   ");
     logger.info("Starting ASCII Bar Chart Generator...");
@@ -32,7 +32,6 @@ const main = () => {
         } else {
             logger.error("Unknown error.");
         }
-        process.exit(1);
     }
 };
 
