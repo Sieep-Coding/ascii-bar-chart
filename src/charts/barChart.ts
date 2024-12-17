@@ -1,5 +1,4 @@
 import chalk from "chalk";
-
 /**
  * Renders ASCII Bar Chart
  * @param data - Array of numbers to display

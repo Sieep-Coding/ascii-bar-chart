@@ -1,18 +1,17 @@
 {
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-      "rootDir": ".",  // Include tests and src
-      "outDir": "dist-tests",
-      "target": "ES2022",
-      "module": "ESNext",
-      "moduleResolution": "Node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "noEmit": true,
-      "allowImportingTsExtensions": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["tests", "src"]
-  }
-  
+  "extends": "./tsconfig.json",  // Inherits from your main tsconfig
+  "compilerOptions": {
+    "rootDir": ".",  // Set root directory for tests and src
+    "outDir": "dist-tests",  // Output for transpiled files (though Jest should not require this)
+    "target": "ES2022",  // Set modern target for features like top-level await
+    "module": "ESNext",  // Use ESNext modules for native import/export support
+    "moduleResolution": "Node",  // Node resolution strategy for module imports
+    "esModuleInterop": true,  // Allow default imports for CommonJS modules (like chalk)
+    "skipLibCheck": true,  // Skip checking library files for faster compilation
+    "strict": true,  // Enable strict mode for TypeScript
+    "noEmit": true,  // Don't emit JS files (necessary for Jest)
+    "allowImportingTsExtensions": true,  // Allow .ts extensions in imports
+    "forceConsistentCasingInFileNames": true  // Ensure file name consistency across platforms
+  },
+  "include": ["src", "tests"]  // Include both the tests and source files
+}
