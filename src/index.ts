@@ -8,4 +8,22 @@ const main = () => {
     logger.info("Starting ASCII Bar Chart Generator...");
 
     const args = parseArgs();
-}
+
+    try {
+        const rawData = args.data
+        ? args.data.split(",").map(Number)
+        : sampleData;
+
+        if (rawData.some(isNaN)) {
+            logger.error("One or more value is not a number!");
+            throw new Error("Invalid input: All values must be numbers.");
+        }
+
+        renderBarChart(rawData);
+    } catch (error) {
+        if ()
+        process.exit(1);
+    }
+};
+
+main();
