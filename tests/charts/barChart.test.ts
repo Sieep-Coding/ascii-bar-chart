@@ -2,7 +2,7 @@ import { renderBarChart } from "../../src/charts/barChart";
 
 describe("renderBarChart", () => {
     it("should render bar chart without an error message occurring.", () => {
-        const testData = [5, 15, 20];
+        const testData = [5, 15, 20, -500, 0];
         console.log = jest.fn();
         renderBarChart(testData);
         expect(console.log).toHaveBeenCalled();
