@@ -9,4 +9,4 @@ Render a simple bar-chart in the console.
 
 ## License
 
-See [License](LICENSE.md)
+See [License.](LICENSE)
