@@ -13,10 +13,10 @@ export const main = () => {
     try {
         const rawData = args.data
             ? args.data
-                .split(",")  // Split by commas
-                .map((item) => item.trim()) // Trim any spaces
-                .filter(item => item.length > 0) // Remove empty items
-                .map(Number)    // Convert the strings to numbers
+                .split(",")
+                .map((item) => item.trim())
+                .filter(item => item.length > 0)
+                .map(Number)
             : sampleData;
 
         if (rawData.some(isNaN)) {
