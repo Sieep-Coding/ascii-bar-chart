@@ -1,1 +1,1 @@
-export const sampleData = [5, 15, 20, 25, 40, 35, 22, 9, 6]
+export const sampleData = [5, 15, 20, 25, 40, 35, 22, 9]
