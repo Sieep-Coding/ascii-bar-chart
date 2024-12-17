@@ -21,7 +21,11 @@ const main = () => {
 
         renderBarChart(rawData);
     } catch (error) {
-        if ()
+        if (error instanceof Error) {
+            logger.error(error.message);
+        } else {
+            logger.error("Unknown error.");
+        }
         process.exit(1);
     }
 };
