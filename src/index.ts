@@ -12,12 +12,12 @@ const main = () => {
     try {
         const rawData = args.data
             ? args.data
-                .split(",") 
-                .map((value) => value.trim()) 
-                .filter((value) => value !== "") 
-                .map(Number) 
-                .filter((num) => !isNaN(num)) // Filter out invalid numbers
+                .split(",")  // Split by commas
+                .map((item) => item.trim()) // Trim any spaces
+                .filter(item => item.length > 0) // Remove empty items
+                .map(Number)    // Convert the strings to numbers
             : sampleData;
+
 
         if (rawData.some(isNaN)) {
             logger.error("One or more value is not a number!");
@@ -25,7 +25,7 @@ const main = () => {
         }
 
         renderBarChart(rawData);
-        console.log("Parsed data:", rawData);
+
     } catch (error) {
         if (error instanceof Error) {
             logger.error(error.message);
