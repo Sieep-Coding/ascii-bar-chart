@@ -2,7 +2,16 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
       "rootDir": ".",  // Include tests and src
-      "outDir": "dist-tests"
+      "outDir": "dist-tests",
+      "target": "ES2022",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "noEmit": true,
+      "allowImportingTsExtensions": true,
+      "forceConsistentCasingInFileNames": true
     },
     "include": ["tests", "src"]
   }
