@@ -6,7 +6,7 @@ import chalk from "chalk";
  */
 export const renderBarChart = (data: number[]) => {
     const maxValue = Math.max(...data);
-    console.log(chalk.bold("\nASCII Bar Chart:\n"));
+    console.log(chalk.cyan.bold("\nASCII Bar Chart:\n"));
 
     data.forEach((value, index) => {
         const barLength = Math.max(1, Math.floor((value / maxValue) * 40));

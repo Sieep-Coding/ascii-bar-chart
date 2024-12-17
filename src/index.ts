@@ -5,6 +5,7 @@ import { sampleData } from "./data/sampleData.ts";
 
 const main = () => {
     const logger = new Logger();
+    console.log("   ");
     logger.info("Starting ASCII Bar Chart Generator...");
 
     const args = parseArgs();
