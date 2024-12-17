@@ -19,7 +19,6 @@ const main = () => {
                 .map(Number)    // Convert the strings to numbers
             : sampleData;
 
-
         if (rawData.some(isNaN)) {
             logger.error("One or more value is not a number!");
             throw new Error("Invalid input: All values must be numbers.");
