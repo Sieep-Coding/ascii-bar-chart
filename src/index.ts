@@ -1,7 +1,7 @@
-import { parseArgs } from "./cli/args";
-import { renderBarChart } from "./charts/barChart";
-import { Logger } from "./utils/logger";
-import { sampleData } from "./data/sampleData";
+import { parseArgs } from "./cli/args.ts";
+import { renderBarChart } from "./charts/barChart.ts";
+import { Logger } from "./utils/logger.ts";
+import { sampleData } from "./data/sampleData.ts";
 
 const main = () => {
     const logger = new Logger();
@@ -11,8 +11,13 @@ const main = () => {
 
     try {
         const rawData = args.data
-        ? args.data.split(",").map(Number)
-        : sampleData;
+            ? args.data
+                .split(",") 
+                .map((value) => value.trim()) 
+                .filter((value) => value !== "") 
+                .map(Number) 
+                .filter((num) => !isNaN(num)) // Filter out invalid numbers
+            : sampleData;
 
         if (rawData.some(isNaN)) {
             logger.error("One or more value is not a number!");
@@ -20,6 +25,7 @@ const main = () => {
         }
 
         renderBarChart(rawData);
+        console.log("Parsed data:", rawData);
     } catch (error) {
         if (error instanceof Error) {
             logger.error(error.message);

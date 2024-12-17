@@ -2,8 +2,9 @@
   "name": "ascii-bar-chart",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "node --loader ts-node/esm src/index.ts",
     "build": "tsc",
     "test": "jest"
   },

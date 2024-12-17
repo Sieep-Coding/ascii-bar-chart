@@ -1,4 +1,4 @@
-import chalk from "../../node_modules/chalk/source/index";
+import chalk from "chalk";
 
 /**
  * Renders ASCII Bar Chart
