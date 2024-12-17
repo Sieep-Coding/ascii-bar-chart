@@ -13,7 +13,7 @@ TEST_CMD = $(NPM) test
 
 # Define default target
 .PHONY: all
-all: install test
+all: install test start
 
 # Install dependencies
 .PHONY: install
