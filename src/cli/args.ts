@@ -12,4 +12,5 @@ export const parseArgs = () => {
         .help()
         .parseSync();
     return parsedArgs;
+    
 };
