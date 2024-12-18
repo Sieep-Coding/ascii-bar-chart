@@ -23,7 +23,6 @@ make install
 ```bash
 make all
 ```
-
 ## License
 
 See [License.](LICENSE)
